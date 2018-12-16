@@ -10,7 +10,7 @@ tags: git
 
 #### Case1: 想要撤销代码在工作区的修改
 
-```
+```bash
 //撤销工作区某个文件的修改(恢复暂存区的文件到工作区)
 git checkout <file> <file2>...
 
@@ -26,7 +26,7 @@ git clean -df
 
 #### Case2: 想要撤销代码在暂存区的修改
 
-```
+```bash
 git reset HEAD 
 ```
 
@@ -36,7 +36,7 @@ git reset HEAD
 
 方案1:
 
-```
+```bash
 1. 首先执行 git log 查看第5次提交的 HEAD 值
 2. 然后执行 git reset --hard <HEAD 5>
 3. git add . 
@@ -52,7 +52,7 @@ git reset HEAD
 
 更好的回滚方法是：
 
-```
+```bash
 1. 首先执行 git log 查看第5次提交的 HEAD 值
 2. 然后执行 git reset --hard <HEAD 5>
 3. 然后执行 git log 查看最后一次（第8次）提交的 HEAD 值
@@ -66,7 +66,7 @@ git reset HEAD
 
 ### 怎么解决冲突
 
-```
+```bash
 //检查冲突
 grep -rl '<<<<<' 
 
@@ -81,7 +81,7 @@ grep -rl '<<<<<'
 
 当你在 `A分支` 上工作时，有人来告诉你说 `B功能` 有些地方需要调整，这时候需要先把 `A分支` 的代码储存起来，然后切到 `B分支`。
 
-```
+```bash
 //储存当前工作区的内容
 git stash
 
@@ -100,14 +100,14 @@ git stash clear
 
 ### 有哪些可以提高效率的命令
 
-```
+```bash
 //切换到上一个分支
 git checkout -
 ```
 
 `oh-my-zsh` 的一些常用命令缩写:
 
-```
+```bash
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
